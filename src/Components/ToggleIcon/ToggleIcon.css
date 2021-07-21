@@ -1,0 +1,92 @@
+.menu-toggle {
+  display: block;
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  background-color: transparent;
+  border: 0 none;
+  cursor: pointer;
+  font-family: sans-serif;
+  outline: medium none;
+  overflow: visible;
+  text-align: center;
+}
+
+.menu-toggle:before {
+  display: block;
+  padding: 12px 0;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  transition: color 0.2s ease 0s, opacity 0.3s ease 0s, visibility 0.3s ease 0s;
+}
+
+.menu--is-revealed .menu-toggle:before {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu-toggle .icon-bars,
+.menu-toggle .icon-bars:before,
+.menu-toggle .icon-bars:after {
+  transition: background-color 0.2s ease;
+}
+
+.menu-toggle .icon-bars {
+  transition: transform 0.3s ease-in, background-color 0.2s ease;
+}
+
+.menu-toggle .icon-bars:before,
+.menu-toggle .icon-bars:after {
+  transition: top 0.3s 0.3s ease-in, transform 0.3s ease-in,
+    background-color 0.2s ease;
+}
+
+.menu-toggle:active .icon-bars,
+.menu--is-revealed .menu-toggle .icon-bars {
+  transition: transform 0.3s 0.2s ease-in, background-color 0.2s ease;
+  transform: rotate3d(0, 0, 1, 135deg);
+}
+
+.menu-toggle:active .icon-bars:before,
+.menu-toggle:active .icon-bars:after,
+.menu--is-revealed .menu-toggle .icon-bars:before,
+.menu--is-revealed .menu-toggle .icon-bars:after {
+  transition: top 0.2s ease-in, transform 0.3s 0.2s ease-in,
+    background-color 0.2s ease;
+  transform: rotate3d(0, 0, 1, 90deg);
+  top: 0;
+}
+
+.icon-bars {
+  position: relative;
+}
+
+.icon-bars,
+.icon-bars:before,
+.icon-bars:after {
+  display: block;
+  width: 32px;
+  height: 2px;
+}
+
+.icon-bars,
+.icon-bars:before,
+.icon-bars:after {
+  background-color: #273138;
+}
+
+.icon-bars:before,
+.icon-bars:after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.icon-bars:before {
+  top: 0.5em;
+}
+
+.icon-bars:after {
+  top: -0.5em;
+}

@@ -1,8 +1,19 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import Navbar from './Components/Navbar/Navbar';
+
+import { HomeScreen } from './Screens';
+
 const App = () => {
   return (
-    <div>
-      <h1>App</h1>
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <HomeScreen />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 

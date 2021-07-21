@@ -8,6 +8,12 @@ const GlobalStyles = () => {
 
         :root {
           --primary-color: #f5f0e9;
+          --white-color: #ffffff;
+          --green-color: #5b8c51;
+          --grey-color: #878986;
+          --black-color1: #000000;
+          --black-color2: #404a3d;
+          --yellow-color: #eddd5e;
           --primary-font-family: 'Barlow', sans-serif;
           --secondary-font-family: 'Amatic SC', cursive;
         }
@@ -20,6 +26,10 @@ const GlobalStyles = () => {
 
         body {
           font-family: var(--primary-font-family);
+        }
+
+        ul {
+          list-style: none;
         }
 
         a {

@@ -1,6 +1,6 @@
-/** @jsxImportSource @emotion/react */
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 import GlobalStyles from './styles/Global.styles';
 import App from './App';
