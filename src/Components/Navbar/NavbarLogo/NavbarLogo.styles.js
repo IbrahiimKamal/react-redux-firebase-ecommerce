@@ -42,6 +42,11 @@ export const contactStyles = css`
 
 export const navLogo = css`
   margin: 0 auto;
+
+  img {
+    display: block;
+    width: 60%;
+  }
 `;
 
 export const socialIcons = css`

@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 export const headerStyles = css`
   background-color: var(--primary-color);
-  padding: 1.3rem 0;
+  padding: 0.7rem 0;
 `;
 
 export const navStyles = css`
@@ -22,9 +22,10 @@ export const navStyles = css`
 
     .cart-count {
       position: absolute;
-      top: -2px;
+      top: 2px;
       left: 50%;
       transform: translate(-50%, 50%);
+      font-size: 0.8125rem;
     }
   }
 `;
@@ -47,13 +48,6 @@ export const navLinksStyles = css`
     text-transform: capitalize;
     border-radius: 0.3rem;
 
-    background-image: linear-gradient(
-      to left,
-      transparent,
-      transparent 50%,
-      var(--yellow-color) 50%,
-      var(--yellow-color)
-    );
     background-position: 100% 0;
     background-size: 200% 100%;
     transition: all 0.25s ease-in;
@@ -61,6 +55,13 @@ export const navLinksStyles = css`
     &:hover {
       background-position: 0 0;
       color: var(--black-color2);
+      background-image: linear-gradient(
+        to left,
+        transparent,
+        transparent 50%,
+        var(--yellow-color) 50%,
+        var(--yellow-color)
+      );
     }
   }
 
