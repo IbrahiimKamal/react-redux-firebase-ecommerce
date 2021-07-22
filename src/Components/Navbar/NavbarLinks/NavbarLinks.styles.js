@@ -30,9 +30,19 @@ export const navStyles = css`
   }
 `;
 
+export const toggleIconStyles = css`
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
 export const navLinksStyles = css`
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @media (min-width: 992px) {
+    display: flex;
+    align-items: center;
+  }
 
   li {
     margin-right: 0.5rem;

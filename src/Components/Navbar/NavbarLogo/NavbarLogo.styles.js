@@ -46,6 +46,7 @@ export const navLogo = css`
   img {
     display: block;
     width: 60%;
+    margin: 0 auto;
   }
 `;
 
