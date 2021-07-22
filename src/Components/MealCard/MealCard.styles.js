@@ -8,6 +8,7 @@ export const cardStyles = css`
   border-radius: 0.5rem;
   margin: 0 auto;
   overflow: hidden;
+  box-shadow: 0px 11px 59px 0 rgb(53 78 84 / 6%);
 `;
 
 export const imgContainerStyles = css`
