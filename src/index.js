@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 import GlobalStyles from './styles/Global.styles';
 import App from './App';
+import { store } from './Redux/store';
+
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <>
+  <Provider store={store}>
     <GlobalStyles />
     <App />
-  </>,
+  </Provider>,
   document.getElementById('root')
 );
 

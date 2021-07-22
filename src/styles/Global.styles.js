@@ -14,6 +14,8 @@ const GlobalStyles = () => {
           --black-color1: #000000;
           --black-color2: #404a3d;
           --yellow-color: #eddd5e;
+          --border-color: #f6f6f6;
+          --border-color2: #e5e5e5;
           --primary-font-family: 'Barlow', sans-serif;
           --secondary-font-family: 'Amatic SC', cursive;
         }
@@ -26,6 +28,7 @@ const GlobalStyles = () => {
 
         body {
           font-family: var(--primary-font-family);
+          height: 5000px;
         }
 
         ul {
@@ -34,6 +37,14 @@ const GlobalStyles = () => {
 
         a {
           text-decoration: none;
+        }
+
+        input,
+        textarea,
+        button,
+        select,
+        a {
+          -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
       `}
     />
