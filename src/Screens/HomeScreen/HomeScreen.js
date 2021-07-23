@@ -6,6 +6,7 @@ import ServicesCard from '../../Components/ServicesCard/ServicesCard';
 import Brand from '../../Components/Brand/Brand';
 import Box from '../../Components/Box/Box';
 import Meals from '../../Components/Meals/Meals';
+import Modal from '../../Components/Modal/Modal';
 
 const HomeScreen = () => {
   return (
@@ -71,10 +72,16 @@ const HomeScreen = () => {
         </AppCol>
       </SectionContainer>
 
-      <SectionContainer padding="py-5">
+      <SectionContainer padding="pt-4">
         <Meals sliceStart={8} sliceEnd={16} />
       </SectionContainer>
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+
+      <SectionContainer className="section-bg">
+        <AppCol cols="col-11 col-md-6 mx-auto">
+          <Modal />
+        </AppCol>
+      </SectionContainer>
     </>
   );
 };
