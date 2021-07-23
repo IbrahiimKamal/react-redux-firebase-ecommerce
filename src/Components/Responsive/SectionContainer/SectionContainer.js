@@ -2,10 +2,10 @@ const SectionContainer = ({
   children,
   padding,
   container = 'container',
-  className,
+  className = '',
 }) => {
   return (
-    <section className={`${padding} ${className}`}>
+    <section className={[padding, className].join(' ').trim()}>
       <div className={container}>
         <div className="row">{children}</div>
       </div>

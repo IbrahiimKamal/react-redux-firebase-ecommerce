@@ -106,159 +106,161 @@ class BannerSlider extends Component {
       </span>
     ));
     return (
-      <div className="banner-container">
-        <BannerAnim
-          onChange={this.onChange}
-          onMouseEnter={this.onMouseEnter}
-          onMouseLeave={this.onMouseLeave}
-          prefixCls="custom-arrow-thumb overlay"
-          autoPlay
-        >
-          <Element key="aaa" prefixCls="banner-user-elem">
-            <BgElement
-              key="bg"
-              className="bg"
-              style={{
-                backgroundImage: `url(${this.imgArray[0]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-            <TweenOne
-              className="banner-user-title"
-              animation={{ y: 30, opacity: 0, type: 'from' }}
-            >
-              The best Agriculture products
-              <img
-                src={lineImage}
-                alt="lineImage"
-                className="banner-line-image"
-              />
-            </TweenOne>
-            <TweenOne
-              className="banner-user-text"
-              animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-            >
-              Welcom to <br /> agriculture Form
-            </TweenOne>
-          </Element>
-          <Element key="bbb" prefixCls="banner-user-elem">
-            <BgElement
-              key="bg"
-              className="bg"
-              style={{
-                backgroundImage: `url(${this.imgArray[1]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-            <TweenOne
-              className="banner-user-title"
-              animation={{ y: 30, opacity: 0, type: 'from' }}
-            >
-              The best Agriculture products
-              <img
-                src={lineImage}
-                alt="lineImage"
-                className="banner-line-image"
-              />
-            </TweenOne>
-            <TweenOne
-              className="banner-user-text"
-              animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-            >
-              Welcom to <br /> agriculture Form
-            </TweenOne>
-          </Element>
-          <Element key="ccc" prefixCls="banner-user-elem">
-            <BgElement
-              key="bg"
-              className="bg"
-              style={{
-                backgroundImage: `url(${this.imgArray[2]})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-              }}
-            />
-            <TweenOne
-              className="banner-user-title"
-              animation={{ y: 30, opacity: 0, type: 'from' }}
-            >
-              The best Agriculture products
-              <img
-                src={lineImage}
-                alt="lineImage"
-                className="banner-line-image"
-              />
-            </TweenOne>
-            <TweenOne
-              className="banner-user-text"
-              animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
-            >
-              Welcom to <br /> agriculture Form
-            </TweenOne>
-          </Element>
-          <Arrow
-            arrowType="prev"
-            key="prev"
-            prefixCls="user-arrow"
-            component={TweenOne}
-            onMouseEnter={this.prevEnter}
-            onMouseLeave={this.prevLeave}
-            animation={{ left: this.state.prevEnter ? 0 : -120 }}
+      <>
+        <div className="banner-container">
+          <BannerAnim
+            onChange={this.onChange}
+            onMouseEnter={this.onMouseEnter}
+            onMouseLeave={this.onMouseLeave}
+            prefixCls="custom-arrow-thumb overlay"
+            autoPlay
           >
-            <div className="arrow"></div>
-            <TweenOneGroup
-              enter={{ opacity: 0, type: 'from' }}
-              leave={{ opacity: 0 }}
-              appear={false}
-              className="img-wrapper"
-              component="ul"
-            >
-              <li
+            <Element key="aaa" prefixCls="banner-user-elem">
+              <BgElement
+                key="bg"
+                className="bg"
                 style={{
-                  backgroundImage: `url(${this.imgArray[intArray[0]]})`,
+                  backgroundImage: `url(${this.imgArray[0]})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                 }}
-                key={intArray[0]}
               />
-            </TweenOneGroup>
-          </Arrow>
-          <Arrow
-            arrowType="next"
-            key="next"
-            prefixCls="user-arrow"
-            component={TweenOne}
-            onMouseEnter={this.nextEnter}
-            onMouseLeave={this.nextLeave}
-            animation={{ right: this.state.nextEnter ? 0 : -120 }}
-          >
-            <div className="arrow"></div>
-            <TweenOneGroup
-              enter={{ opacity: 0, type: 'from' }}
-              leave={{ opacity: 0 }}
-              appear={false}
-              className="img-wrapper"
-              component="ul"
-            >
-              <li
+              <TweenOne
+                className="banner-user-title"
+                animation={{ y: 30, opacity: 0, type: 'from' }}
+              >
+                The best Agriculture products
+                <img
+                  src={lineImage}
+                  alt="lineImage"
+                  className="banner-line-image"
+                />
+              </TweenOne>
+              <TweenOne
+                className="banner-user-text"
+                animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+              >
+                Welcom to <br /> agriculture Form
+              </TweenOne>
+            </Element>
+            <Element key="bbb" prefixCls="banner-user-elem">
+              <BgElement
+                key="bg"
+                className="bg"
                 style={{
-                  backgroundImage: `url(${this.imgArray[intArray[1]]})`,
+                  backgroundImage: `url(${this.imgArray[1]})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
                 }}
-                key={intArray[1]}
               />
-            </TweenOneGroup>
-          </Arrow>
-          <Thumb
-            prefixCls="user-thumb"
-            key="thumb"
-            component={TweenOne}
-            animation={{ bottom: this.state.thumbEnter ? 0 : -70 }}
-          >
-            {thumbChildren}
-          </Thumb>
-        </BannerAnim>
-        {/* <div className="overlay"></div> */}
-      </div>
+              <TweenOne
+                className="banner-user-title"
+                animation={{ y: 30, opacity: 0, type: 'from' }}
+              >
+                The best Agriculture products
+                <img
+                  src={lineImage}
+                  alt="lineImage"
+                  className="banner-line-image"
+                />
+              </TweenOne>
+              <TweenOne
+                className="banner-user-text"
+                animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+              >
+                Welcom to <br /> agriculture Form
+              </TweenOne>
+            </Element>
+            <Element key="ccc" prefixCls="banner-user-elem">
+              <BgElement
+                key="bg"
+                className="bg"
+                style={{
+                  backgroundImage: `url(${this.imgArray[2]})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              />
+              <TweenOne
+                className="banner-user-title"
+                animation={{ y: 30, opacity: 0, type: 'from' }}
+              >
+                The best Agriculture products
+                <img
+                  src={lineImage}
+                  alt="lineImage"
+                  className="banner-line-image"
+                />
+              </TweenOne>
+              <TweenOne
+                className="banner-user-text"
+                animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
+              >
+                Welcom to <br /> agriculture Form
+              </TweenOne>
+            </Element>
+            <Arrow
+              arrowType="prev"
+              key="prev"
+              prefixCls="user-arrow"
+              component={TweenOne}
+              onMouseEnter={this.prevEnter}
+              onMouseLeave={this.prevLeave}
+              animation={{ left: this.state.prevEnter ? 0 : -120 }}
+            >
+              <div className="arrow"></div>
+              <TweenOneGroup
+                enter={{ opacity: 0, type: 'from' }}
+                leave={{ opacity: 0 }}
+                appear={false}
+                className="img-wrapper"
+                component="ul"
+              >
+                <li
+                  style={{
+                    backgroundImage: `url(${this.imgArray[intArray[0]]})`,
+                  }}
+                  key={intArray[0]}
+                />
+              </TweenOneGroup>
+            </Arrow>
+            <Arrow
+              arrowType="next"
+              key="next"
+              prefixCls="user-arrow"
+              component={TweenOne}
+              onMouseEnter={this.nextEnter}
+              onMouseLeave={this.nextLeave}
+              animation={{ right: this.state.nextEnter ? 0 : -120 }}
+            >
+              <div className="arrow"></div>
+              <TweenOneGroup
+                enter={{ opacity: 0, type: 'from' }}
+                leave={{ opacity: 0 }}
+                appear={false}
+                className="img-wrapper"
+                component="ul"
+              >
+                <li
+                  style={{
+                    backgroundImage: `url(${this.imgArray[intArray[1]]})`,
+                  }}
+                  key={intArray[1]}
+                />
+              </TweenOneGroup>
+            </Arrow>
+            <Thumb
+              prefixCls="user-thumb"
+              key="thumb"
+              component={TweenOne}
+              animation={{ bottom: this.state.thumbEnter ? 0 : -70 }}
+            >
+              {thumbChildren}
+            </Thumb>
+          </BannerAnim>
+          {/* <div className="overlay"></div> */}
+        </div>
+      </>
     );
   }
 }

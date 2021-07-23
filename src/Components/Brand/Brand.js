@@ -3,7 +3,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { brandsImages } from '../../utils/brandsImages';
-import Title from '../Title/Title';
 
 import './Brand.css';
 
@@ -40,7 +39,7 @@ const Brand = () => {
   };
 
   return (
-    <section className="py-5 brand">
+    <section className="py-5 brand section-bg">
       <div className="container">
         {/* Slider */}
         <div className="slider-container ">
