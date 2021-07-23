@@ -25,12 +25,6 @@
   outline: none;
 }
 
-/* @media screen and (min-width: 576px) {
-  .cart-button {
-    width: 75%;
-  }
-} */
-
 .cart-button .fa-shopping-cart {
   position: absolute;
   z-index: 2;

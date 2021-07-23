@@ -46,6 +46,10 @@ const GlobalStyles = () => {
         a {
           -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
+        .section-bg {
+          background-color: var(--primary-color);
+        }
       `}
     />
   );
