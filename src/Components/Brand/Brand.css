@@ -5,3 +5,12 @@
 .slick-slide:focus {
   outline: none;
 }
+
+.slick-img {
+  display: block;
+  margin: 0 auto;
+}
+
+.slider-container {
+  overflow: hidden;
+}

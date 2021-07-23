@@ -13,8 +13,30 @@ const Brand = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
+    speed: 1000,
+    autoplaySpeed: 1000,
+
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -26,13 +48,19 @@ const Brand = () => {
           </div>
         </div>
 
-        <Slider {...settings}>
-          {brandsImages.map((brand) => (
-            <div key={brand.id} className="slick-slide">
-              <img src={brand.brandImg} alt={brand.brandImg} />
-            </div>
-          ))}
-        </Slider>
+        <div className="slider-container">
+          <Slider {...settings}>
+            {brandsImages.map((brand) => (
+              <div key={brand.id} className="slick-slide">
+                <img
+                  src={brand.brandImg}
+                  alt="brand logo"
+                  className="slick-img"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </section>
   );
