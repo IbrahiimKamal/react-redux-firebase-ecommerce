@@ -1,8 +1,12 @@
 /** @jsxImportSource @emotion/react */
 
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { formatPrice } from '../../utils/formatPrice';
+
+import { addCart } from '../../Redux/cart/cart_actions';
 
 import {
   cardFooterStyles,
@@ -17,6 +21,9 @@ import {
 import Button from '../Button/Button';
 
 const MealCard = ({ meal }) => {
+  const [isActive, setIsActive] = useState(false);
+  const dispatch = useDispatch();
+
   const {
     strMealThumb: mealImg,
     strMeal: mealName,
@@ -27,6 +34,19 @@ const MealCard = ({ meal }) => {
     strIngredient3,
     strIngredient4,
   } = meal;
+
+  useEffect(() => {
+    if (isActive) {
+      setTimeout(() => {
+        setIsActive(false);
+      }, 1500);
+    }
+  }, [isActive]);
+
+  const onClickHandler = () => {
+    setIsActive(true);
+    dispatch(addCart(meal));
+  };
 
   return (
     <>
@@ -54,7 +74,7 @@ const MealCard = ({ meal }) => {
             {formatPrice(mealPrice)}
           </span>
           {/* Add To Card Button */}
-          <Button />
+          <Button onClickHandler={onClickHandler} isActive={isActive} />
 
           {/* New Item */}
           {(mealArea.toLowerCase().trim() === 'egyptian' ||

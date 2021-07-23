@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { NavLink } from 'react-router-dom';
 import { BsSearch, BsBag } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 import ToggleIcon from '../../ToggleIcon/ToggleIcon';
 
@@ -13,6 +14,8 @@ import {
 } from './NavbarLinks.styles';
 
 const NavbarLinks = () => {
+  const cart = useSelector((state) => state.cart);
+
   return (
     <header css={headerStyles}>
       <div className="container">
@@ -38,7 +41,7 @@ const NavbarLinks = () => {
           {/* cart icon */}
           <span className="cart">
             <BsBag size={30} />
-            <span className="cart-count">22</span>
+            <span className="cart-count">{cart.numberCart}</span>
           </span>
         </nav>
       </div>
