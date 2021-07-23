@@ -14,5 +14,5 @@ export const subtitleStyles = css`
 export const titleStyles = css`
   font-family: var(--secondary-font-family);
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 2rem;
 `;

@@ -40,15 +40,10 @@ const Brand = () => {
   };
 
   return (
-    <section className="py-5">
+    <section className="py-5 brand">
       <div className="container">
-        <div className="row pb-5">
-          <div className="col-10 mx-auto">
-            <Title title="Clients Who Trust Us" subtitle="Our clients" />
-          </div>
-        </div>
-
-        <div className="slider-container">
+        {/* Slider */}
+        <div className="slider-container ">
           <Slider {...settings}>
             {brandsImages.map((brand) => (
               <div key={brand.id} className="slick-slide">

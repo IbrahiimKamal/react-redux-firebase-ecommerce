@@ -15,7 +15,7 @@ const ServicesCard = () => {
   return (
     <>
       {servicesData.map(({ id, title, text, serviceImg }) => (
-        <AppCol key={id} cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
+        <AppCol key={id} cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-4">
           <div css={cardStyles}>
             <div css={cardHeaderStyles}>
               <h3 css={titleStyles}>{title}</h3>

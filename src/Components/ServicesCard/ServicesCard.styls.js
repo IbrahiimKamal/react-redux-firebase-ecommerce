@@ -2,10 +2,11 @@ import { css } from '@emotion/react';
 
 export const cardStyles = css`
   background-color: var(--white-color);
-  max-width: 250px;
+  max-width: 294px;
   margin: 0 auto;
   border-radius: 0.3rem;
   overflow: hidden;
+  box-shadow: 0px 11px 59px 0 rgb(53 78 84 / 6%);
 `;
 
 export const cardHeaderStyles = css`

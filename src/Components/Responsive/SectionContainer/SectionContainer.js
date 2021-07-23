@@ -1,4 +1,9 @@
-const SectionContainer = ({ children, padding, container, className }) => {
+const SectionContainer = ({
+  children,
+  padding,
+  container = 'container',
+  className,
+}) => {
   return (
     <section className={`${padding} ${className}`}>
       <div className={container}>

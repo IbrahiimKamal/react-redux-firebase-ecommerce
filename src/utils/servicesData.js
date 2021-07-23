@@ -14,7 +14,7 @@ export const servicesData = [
   {
     id: 2,
     title: 'fresh vegetables',
-    text: 'We ensure the product quality that is our main goal',
+    text: 'We ensure the product quality that is our main goal. Buy Now',
     serviceImg: serviceImg2,
   },
 

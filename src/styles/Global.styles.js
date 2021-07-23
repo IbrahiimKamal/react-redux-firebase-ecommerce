@@ -28,7 +28,7 @@ const GlobalStyles = () => {
 
         body {
           font-family: var(--primary-font-family);
-          height: 5000px;
+          height: 8000px;
         }
 
         ul {

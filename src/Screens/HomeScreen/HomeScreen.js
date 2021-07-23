@@ -5,50 +5,67 @@ import MealCard from '../../Components/MealCard/MealCard';
 import Title from '../../Components/Title/Title';
 import ServicesCard from '../../Components/ServicesCard/ServicesCard';
 import Brand from '../../Components/Brand/Brand';
+import Box from '../../Components/Box/Box';
 
 const HomeScreen = () => {
   return (
     <>
-      {/* ###### Banner Section ###### */}
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
       <BannerSlider />
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
-      {/* ###### Meals Section ###### */}
-      <SectionContainer padding="py-5" container="container">
-        <AppCol cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      <SectionContainer padding="py-5">
+        <AppCol cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <MealCard />
         </AppCol>
-        <AppCol cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
+        <AppCol cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <MealCard />
         </AppCol>
-        <AppCol cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
+        <AppCol cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <MealCard />
         </AppCol>
-        <AppCol cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
+        <AppCol cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3">
           <MealCard />
         </AppCol>
       </SectionContainer>
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
-      {/* ###### Service Card Section ###### */}
-      <SectionContainer
-        className="section-bg"
-        padding="pt-5"
-        container="container"
-      >
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* Title Component */}
+      <SectionContainer className="section-bg" padding="pt-5">
         <AppCol cols="col-10 mx-auto">
           <Title title="services we offer" subtitle="what we do" />
         </AppCol>
       </SectionContainer>
 
-      <SectionContainer
-        className="section-bg"
-        padding="py-5"
-        container="container"
-      >
+      {/* Services Card Component */}
+      <SectionContainer className="section-bg" padding="py-5">
         <ServicesCard />
       </SectionContainer>
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
-      {/* ###### Brand Section ###### */}
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* Title */}
+      <SectionContainer padding="pt-5">
+        <AppCol cols="col-10 mx-auto">
+          <Title title="Clients Who Trust Us" subtitle="Our clients" />
+        </AppCol>
+      </SectionContainer>
+
+      {/* Brand Component */}
       <Brand />
+
+      {/* Box Component */}
+      <SectionContainer padding="py-5">
+        <AppCol cols="col-11 col-md-6 mx-auto mb-3">
+          <Box text="We Sale Best Agriculture Products" />
+        </AppCol>
+        <AppCol cols="col-11 col-md-6 mx-auto ">
+          <Box text="We’ve 40 years experience in field" />
+        </AppCol>
+      </SectionContainer>
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
     </>
   );
 };
