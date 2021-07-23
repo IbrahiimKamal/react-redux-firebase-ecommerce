@@ -13,7 +13,6 @@ const Button = () => {
     if (isActive) {
       setTimeout(() => {
         setIsActive(false);
-        console.log('hiiii');
       }, 1500);
     }
 

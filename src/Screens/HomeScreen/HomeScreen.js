@@ -4,6 +4,7 @@ import AppCol from '../../Components/Responsive/AppCol/AppCol';
 import MealCard from '../../Components/MealCard/MealCard';
 import Title from '../../Components/Title/Title';
 import ServicesCard from '../../Components/ServicesCard/ServicesCard';
+import Brand from '../../Components/Brand/Brand';
 
 const HomeScreen = () => {
   return (
@@ -45,6 +46,9 @@ const HomeScreen = () => {
       >
         <ServicesCard />
       </SectionContainer>
+
+      {/* ###### Brand Section ###### */}
+      <Brand />
     </>
   );
 };
