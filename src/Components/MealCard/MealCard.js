@@ -52,7 +52,7 @@ const MealCard = ({ meal }) => {
     <>
       <div css={cardStyles}>
         {/* card image */}
-        <Link to="/" css={imgContainerStyles}>
+        <Link to="/shop" css={imgContainerStyles}>
           <img css={fruitImageStyles} src={mealImg} alt="fruit" />
         </Link>
         {/* card footer */}
