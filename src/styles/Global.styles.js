@@ -49,6 +49,19 @@ const GlobalStyles = () => {
         .section-bg {
           background-color: var(--primary-color);
         }
+
+        .section-bg-white {
+          background-color: var(--white-color);
+        }
+
+        .overflowHidden {
+          overflow: hidden;
+        }
+
+        .bordeRadius {
+          border-radius: 0.3rem;
+          padding: 2rem 0 0;
+        }
       `}
     />
   );

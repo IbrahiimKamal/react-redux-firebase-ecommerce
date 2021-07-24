@@ -64,7 +64,7 @@ class Modal extends Component {
     const imgBoxHeight = 96;
 
     if (this.props.dataArray) {
-      return this.props.dataArray.map((item, i) => {
+      return this.props.dataArray.slice(0, 24).map((item, i) => {
         const {
           strMealThumb: image,
           strMeal: title,
@@ -159,6 +159,7 @@ class Modal extends Component {
                 >
                   <h1>{title}</h1>
                   <AiOutlineClose
+                    className="closeIconPopUp"
                     type="cross"
                     onClick={(e) => this.onClose(e, i)}
                   />
@@ -175,25 +176,27 @@ class Modal extends Component {
 
   render() {
     return (
-      <div className="gallery">
-        <div className={`${this.props.className}-wrapper`}>
-          <div className={this.props.className}>
-            <QueueAnim
-              type="bottom"
-              className={`${this.props.className}-title`}
-            ></QueueAnim>
-            <QueueAnim
-              delay={this.getDelay}
-              component="ul"
-              className={`${this.props.className}-image-wrapper`}
-              interval={0}
-              type="bottom"
-            >
-              {this.getLiChildren()}
-            </QueueAnim>
+      <>
+        <div className="gallery">
+          <div className={`${this.props.className}-wrapper`}>
+            <div className={this.props.className}>
+              <QueueAnim
+                type="bottom"
+                className={`${this.props.className}-title`}
+              ></QueueAnim>
+              <QueueAnim
+                delay={this.getDelay}
+                component="ul"
+                className={`${this.props.className}-image-wrapper`}
+                interval={0}
+                type="bottom"
+              >
+                {this.getLiChildren()}
+              </QueueAnim>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

@@ -1,3 +1,5 @@
+/** @jsxImportSource @emotion/react */
+
 import BannerSlider from '../../Components/BannerSlider/BannerSlider';
 import SectionContainer from '../../Components/Responsive/SectionContainer/SectionContainer';
 import AppCol from '../../Components/Responsive/AppCol/AppCol';
@@ -7,6 +9,9 @@ import Brand from '../../Components/Brand/Brand';
 import Box from '../../Components/Box/Box';
 import Meals from '../../Components/Meals/Meals';
 import Modal from '../../Components/Modal/Modal';
+import Progress from '../../Components/Progress/Progress';
+
+import { containerStyles } from './HomeScreen.styles';
 
 const HomeScreen = () => {
   return (
@@ -14,6 +19,19 @@ const HomeScreen = () => {
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
       <BannerSlider />
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* Title Component */}
+      <SectionContainer padding="pt-5">
+        <AppCol cols="col-10 mx-auto">
+          <Title title="FEATURED PRODUCTS" subtitle="our products" />
+        </AppCol>
+      </SectionContainer>
+
+      <SectionContainer padding="py-5">
+        <Meals sliceStart={0} sliceEnd={8} />
+      </SectionContainer>
+      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
       {/* Title Component */}
@@ -28,19 +46,6 @@ const HomeScreen = () => {
         <ServicesCard />
       </SectionContainer>
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
-
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
-      {/* Title Component */}
-      <SectionContainer padding="pt-5">
-        <AppCol cols="col-10 mx-auto">
-          <Title title="FEATURED PRODUCTS" subtitle="our products" />
-        </AppCol>
-      </SectionContainer>
-
-      <SectionContainer padding="py-5">
-        <Meals sliceStart={0} sliceEnd={8} />
-      </SectionContainer>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
       {/* Title */}
@@ -62,6 +67,17 @@ const HomeScreen = () => {
           <Box text="We’ve 40 years experience in field" />
         </AppCol>
       </SectionContainer>
+
+      <SectionContainer
+        css={containerStyles}
+        className="overflowHidden section-bg"
+        padding="pb-5"
+      >
+        <AppCol cols="col-11 col-lg-7 col-xl-6 mx-auto">
+          <Title title="Click on any picture below" className="mb-3" />
+          <Modal />
+        </AppCol>
+      </SectionContainer>
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
 
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
@@ -76,12 +92,6 @@ const HomeScreen = () => {
         <Meals sliceStart={8} sliceEnd={16} />
       </SectionContainer>
       {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
-
-      <SectionContainer className="section-bg">
-        <AppCol cols="col-11 col-md-6 mx-auto">
-          <Modal />
-        </AppCol>
-      </SectionContainer>
     </>
   );
 };
