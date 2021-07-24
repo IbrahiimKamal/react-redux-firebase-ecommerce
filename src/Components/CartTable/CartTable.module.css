@@ -1,0 +1,84 @@
+.tableStyles {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cartInfo {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #000;
+  padding: 1rem 0 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .cartInfo p {
+    display: none;
+  }
+}
+
+.thStyles {
+  text-align: left;
+  padding: 5px;
+  /* color: #fff; */
+  /* background: var(--green-color); */
+  font-weight: normal;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--green-color);
+}
+
+.tdStyles {
+  /* padding: 10px 0; */
+}
+
+.tdStyles span {
+  color: #ff523b;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.cartImg {
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.totalPrice {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.totalPriceTable {
+  border-top: 1px solid var(--green-color);
+  width: 100%;
+  max-width: 400px;
+}
+
+.tdStyles:last-child {
+  text-align: right;
+}
+
+.thStyles:last-child {
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .tdStyles span {
+    color: #ff523b;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .cartInfo p {
+    font-size: 1.2rem;
+  }
+
+  .cartInfo small {
+    font-size: 1rem;
+    margin: 0.3rem 0 0.4rem 0;
+    display: inline-block;
+  }
+}

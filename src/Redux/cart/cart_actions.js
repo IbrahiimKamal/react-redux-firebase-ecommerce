@@ -26,3 +26,10 @@ export const decreaseQuantity = (payload) => {
     payload,
   };
 };
+
+export function deleteCart(payload) {
+  return {
+    type: cartTypes.DELETE_CART,
+    payload,
+  };
+}

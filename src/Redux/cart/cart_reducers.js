@@ -64,6 +64,16 @@ function cartReducer(state = initProduct, action) {
         ...state,
       };
 
+    case cartTypes.DELETE_CART:
+      let quantity_ = state.Carts[action.payload].quantity;
+      return {
+        ...state,
+        numberCart: state.numberCart - quantity_,
+        Carts: state.Carts.filter((item) => {
+          return item.id !== state.Carts[action.payload].id;
+        }),
+      };
+
     default:
       return state;
   }

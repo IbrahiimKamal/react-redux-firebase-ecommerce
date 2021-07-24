@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 
-import { HomeScreen } from './Screens';
+import { CartScreen, HomeScreen } from './Screens';
 
 const App = () => {
   return (
@@ -11,6 +11,9 @@ const App = () => {
       <Switch>
         <Route exact path="/">
           <HomeScreen />
+        </Route>
+        <Route exact path="/cart">
+          <CartScreen />
         </Route>
       </Switch>
     </Router>
