@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import AddToCartButton from '../Buttons/AddToCartButton/AddToCartButton';
+
 import { formatPrice } from '../../utils/formatPrice';
 
 import { addCart } from '../../Redux/cart/cart_actions';
@@ -17,8 +19,6 @@ import {
   commonStyles,
   cardInfoStyles,
 } from './MealCard.styles';
-
-import Button from '../Button/Button';
 
 const MealCard = ({ meal }) => {
   const [isActive, setIsActive] = useState(false);
@@ -74,7 +74,10 @@ const MealCard = ({ meal }) => {
             {formatPrice(mealPrice)}
           </span>
           {/* Add To Card Button */}
-          <Button onClickHandler={onClickHandler} isActive={isActive} />
+          <AddToCartButton
+            onClickHandler={onClickHandler}
+            isActive={isActive}
+          />
 
           {/* New Item */}
           {(mealArea.toLowerCase().trim() === 'egyptian' ||

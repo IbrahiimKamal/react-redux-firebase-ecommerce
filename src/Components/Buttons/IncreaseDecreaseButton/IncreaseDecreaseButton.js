@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import {
   decreaseQuantity,
   increaseQuantity,
-} from '../../Redux/cart/cart_actions';
+} from '../../../Redux/cart/cart_actions';
 
 import {
   btnValueStyles,

@@ -13,6 +13,7 @@ const GlobalStyles = () => {
           --grey-color: #878986;
           --black-color1: #000000;
           --black-color2: #404a3d;
+          --blue-color: #5138ee;
           --yellow-color: #eddd5e;
           --border-color: #f6f6f6;
           --border-color2: #e5e5e5;

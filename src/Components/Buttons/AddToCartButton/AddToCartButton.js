@@ -3,9 +3,9 @@
 import { IoCartSharp } from 'react-icons/io5';
 import { FaBox } from 'react-icons/fa';
 
-import './ButtonStyles.css';
+import './AddToCartButton.css';
 
-const Button = ({ isActive, onClickHandler }) => {
+const AddToCartButton = ({ isActive, onClickHandler }) => {
   return (
     <button
       className={`${isActive ? 'cart-button clicked' : 'cart-button'}`}
@@ -20,4 +20,4 @@ const Button = ({ isActive, onClickHandler }) => {
   );
 };
 
-export default Button;
+export default AddToCartButton;

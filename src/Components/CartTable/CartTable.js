@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteCart } from '../../Redux/cart/cart_actions';
 
 import { formatPrice } from '../../utils/formatPrice';
-import IncreaseDecreaseButton from '../IncreaseDecreaseButton/IncreaseDecreaseButton';
+import IncreaseDecreaseButton from '../Buttons/IncreaseDecreaseButton/IncreaseDecreaseButton';
 
 import styles from './CartTable.module.css';
 
