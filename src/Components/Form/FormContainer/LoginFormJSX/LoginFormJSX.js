@@ -23,7 +23,6 @@ const LoginFormJSX = ({ password }) => {
         placeholder="Enter your Email"
         label="Email"
         errorMessage="you must enter an email"
-        autoFocus
         margin
       />
 
