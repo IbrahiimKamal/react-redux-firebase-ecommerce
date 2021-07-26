@@ -1,4 +1,4 @@
-import { css, keyframes } from '@emotion/react';
+import { css } from '@emotion/react';
 
 export const formStyles = css`
   background-color: var(--white-color);
@@ -6,7 +6,7 @@ export const formStyles = css`
   padding: 1rem;
   border-radius: 0.5rem;
   z-index: 33;
-  max-height: 480px;
+  /* max-height: 380px; */
   overflow-y: scroll;
   overflow-x: hidden;
 
@@ -15,9 +15,9 @@ export const formStyles = css`
     display: none;
   }
 
-  @media (max-width: 600px) {
+  /* @media (max-width: 600px) {
     width: 80%;
-  }
+  } */
 `;
 
 export const googleBtnStyles = css`
@@ -57,11 +57,10 @@ export const logoStyles = css`
   display: block;
   width: 20%;
   cursor: pointer;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 `;
 
 export const titleStyles = css`
-  /* padding: 1rem; */
   text-transform: uppercase;
   letter-spacing: 1px;
 `;
@@ -78,23 +77,4 @@ export const forgotPassowrdStyles = css`
   padding: 0 0 1rem 1rem;
   color: blue;
   color: var(--blue-color);
-`;
-
-const anim = keyframes`
-from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`;
-
-export const loadingStyle = css`
-  animation: ${anim} 0.7s linear infinite;
-`;
-
-export const registerLinkStyles = css`
-  /* animation: ${anim} 0.7s linear infinite; */
-  text-align: center;
-  margin-top: 1rem;
 `;

@@ -1,39 +1,34 @@
 /** @jsxImportSource @emotion/react */
 
-import { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { AiOutlineLoading } from 'react-icons/ai';
+import { useHistory } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 
-import Input from '../Input/Input';
 import Button from '../../Buttons/Button/Button';
+import LoginFormJSX from './LoginFormJSX/LoginFormJSX';
+import RegisterFormJSX from './RegisterFormJSX/RegisterFormJSX';
 
 import logoImg from '../../../Assets/images/logo.png';
 
 import {
   formStyles,
-  loadingStyle,
   headerStyles,
   logoStyles,
   textStyles,
   titleStyles,
-  forgotPassowrdStyles,
-  registerLinkStyles,
   googleBtnStyles,
   lineStyles,
 } from './FormContainer.styles';
 
 const FormContainer = ({ password, btnTitle, havAccount }) => {
-  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
-  return (
-    <>
-      <form onSubmit={handleSubmit} css={formStyles}>
+  const formHeaderJSX = () => {
+    return (
+      <>
         <div css={headerStyles}>
           <img
             css={logoStyles}
@@ -50,77 +45,21 @@ const FormContainer = ({ password, btnTitle, havAccount }) => {
         </Button>
 
         <div css={lineStyles}>or Sign in with Email</div>
+      </>
+    );
+  };
 
-        {havAccount && (
-          <Input
-            inputID="email"
-            placeholder="Enter your Email"
-            label="Email"
-            errorMessage="you must enter an email"
-            autoFocus
-            margin
-          />
-        )}
+  return (
+    <>
+      <form onSubmit={handleSubmit} css={formStyles}>
+        {/* Form Header JSX */}
+        {formHeaderJSX()}
 
-        {havAccount && (
-          <Input
-            inputID="password"
-            type={password}
-            placeholder="Enter your Password"
-            label="Password"
-            errorMessage="you must enter a password"
-          />
-        )}
+        {/* Lonin Form JSX */}
+        {havAccount && <LoginFormJSX password={password} btnTitle={btnTitle} />}
 
-        {!havAccount && (
-          <Input
-            inputID="name"
-            placeholder="Enter your Name"
-            label="Your Name"
-            errorMessage="you must enter an email"
-            autoFocus
-            margin
-          />
-        )}
-
-        {!havAccount && (
-          <Input
-            inputID="email"
-            placeholder="Enter your Email"
-            label="Your Email"
-            errorMessage="you must enter an email"
-            autoFocus
-            margin
-          />
-        )}
-
-        {havAccount && (
-          <Link to="/" css={forgotPassowrdStyles}>
-            Forget password?
-          </Link>
-        )}
-
-        {!loading && <Button width>{btnTitle}</Button>}
-
-        {loading && (
-          <Button width>
-            <span>
-              <AiOutlineLoading size={15} css={loadingStyle} />
-            </span>
-          </Button>
-        )}
-
-        <div css={registerLinkStyles}>
-          <span>
-            {!havAccount ? 'Already have an account?' : 'Not register yet?'}
-          </span>
-          <Link
-            to={`${havAccount ? '/register' : '/login'}`}
-            css={forgotPassowrdStyles}
-          >
-            {!havAccount ? 'Login' : 'Create an Account'}
-          </Link>
-        </div>
+        {/* Register Form JSX */}
+        {!havAccount && <RegisterFormJSX btnTitle={btnTitle} />}
       </form>
     </>
   );
