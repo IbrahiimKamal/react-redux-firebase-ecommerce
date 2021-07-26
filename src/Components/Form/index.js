@@ -2,14 +2,8 @@
 
 import FormContainer from './FormContainer/FormContainer';
 
-const Form = ({ password, btnTitle, havAccount }) => {
-  return (
-    <FormContainer
-      password={password}
-      btnTitle={btnTitle}
-      havAccount={havAccount}
-    />
-  );
+const Form = ({ password, register }) => {
+  return <FormContainer password={password} register={register} />;
 };
 
 export default Form;

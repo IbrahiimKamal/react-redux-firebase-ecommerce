@@ -9,20 +9,14 @@ const LoginScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <Form password="password" btnTitle="Login" havAccount />
+        <Form password="password" />
       </section>
       <ParticleBackground
         position="absolute"
         top="0"
         left="0"
         width="100%"
-        height="100%"
-        background="black"
-      />
-      <ParticleBackground
-        position="static"
-        width="100%"
-        height="300px"
+        height="120%"
         background="black"
       />
     </>

@@ -13,31 +13,21 @@ import {
   registerLinkStyles,
 } from '../LoginRegister.styles';
 
-const RegisterFormJSX = ({ btnTitle }) => {
+const RegisterFormJSX = () => {
   const [loading, setLoading] = useState(false);
 
   return (
     <>
-      {/* <Input
-        inputID="name"
-        placeholder="Enter your Name"
-        label="Your Name"
-        errorMessage="you must enter an email"
-        autoFocus
-        margin
-      /> */}
-
       <Input
         inputID="email"
         placeholder="Enter your Email"
         label="Your Email"
         errorMessage="you must enter an email"
-        autoFocus
       />
 
       {!loading && (
         <Button width handleClick={() => setLoading(true)}>
-          {btnTitle}
+          Register
         </Button>
       )}
 

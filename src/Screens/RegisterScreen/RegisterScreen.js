@@ -9,7 +9,7 @@ const RegisterScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <Form password="password" btnTitle="Register" />
+        <Form register />
       </section>
       <ParticleBackground
         position="absolute"
@@ -17,12 +17,6 @@ const RegisterScreen = () => {
         left="0"
         width="100%"
         height="100%"
-        background="black"
-      />
-      <ParticleBackground
-        position="static"
-        width="100%"
-        height="300px"
         background="black"
       />
     </>

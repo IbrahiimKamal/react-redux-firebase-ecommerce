@@ -13,7 +13,7 @@ import {
   registerLinkStyles,
 } from '../LoginRegister.styles.js';
 
-const LoginFormJSX = ({ password, btnTitle }) => {
+const LoginFormJSX = ({ password }) => {
   const [loading, setLoading] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ const LoginFormJSX = ({ password, btnTitle }) => {
 
       {!loading && (
         <Button width handleClick={() => setLoading(true)}>
-          {btnTitle}
+          Login
         </Button>
       )}
 
