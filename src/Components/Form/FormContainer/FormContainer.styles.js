@@ -6,18 +6,16 @@ export const formStyles = css`
   padding: 1rem;
   border-radius: 0.5rem;
   z-index: 33;
-  /* max-height: 380px; */
   overflow-y: scroll;
   overflow-x: hidden;
-
   &::-webkit-scrollbar {
     height: 8px;
     display: none;
   }
 
-  /* @media (max-width: 600px) {
-    width: 80%;
-  } */
+  @media (max-width: 768px) {
+    width: 85%;
+  }
 `;
 
 export const googleBtnStyles = css`

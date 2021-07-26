@@ -1,16 +1,23 @@
 import Particles from 'react-particles-js';
 import ParticlesConfig from './particle-config';
 
-const ParticleBackground = () => {
+const ParticleBackground = ({
+  position,
+  top,
+  left,
+  width,
+  height,
+  background,
+}) => {
   return (
     <div
       style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        background: '#000000',
+        position,
+        top,
+        left,
+        width,
+        height,
+        background,
         overflow: 'hidden',
       }}
     >
