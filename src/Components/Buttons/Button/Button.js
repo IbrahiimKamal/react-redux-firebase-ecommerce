@@ -2,9 +2,13 @@
 
 import { btnStyles } from './Button.styles';
 
-const Button = ({ children, type, width }) => {
+const Button = ({ children, type, handleClick, width }) => {
   return (
-    <button type={`${type || 'submit'}`} css={btnStyles({ width })}>
+    <button
+      onClick={handleClick}
+      type={`${type || 'submit'}`}
+      css={[btnStyles({ width })]}
+    >
       {children}
     </button>
   );

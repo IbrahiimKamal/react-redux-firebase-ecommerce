@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
+import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { AiOutlineLoading } from 'react-icons/ai';
 
 import Input from '../Input/Input';
 import Button from '../../Buttons/Button/Button';
@@ -9,6 +11,7 @@ import logoImg from '../../../Assets/images/logo.png';
 
 import {
   formStyles,
+  loadingStyle,
   headerStyles,
   logoStyles,
   textStyles,
@@ -16,6 +19,7 @@ import {
 } from './FormContainer.styles';
 
 const FormContainer = ({ styles }) => {
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
 
   const handleSubmit = (e) => {
@@ -49,7 +53,16 @@ const FormContainer = ({ styles }) => {
         label="Password"
         errorMessage="you must enter a password"
       />
-      <Button width>Login</Button>
+
+      {!loading && <Button width>Login</Button>}
+
+      {loading && (
+        <Button width>
+          <span>
+            <AiOutlineLoading size={15} css={loadingStyle} />
+          </span>
+        </Button>
+      )}
     </form>
   );
 };
