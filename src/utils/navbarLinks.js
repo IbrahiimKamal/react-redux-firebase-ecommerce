@@ -5,5 +5,5 @@ export const navLinks = [
   { id: 4, text: 'shop', path: '/cart' },
   { id: 5, text: 'blogs', path: '/blogs' },
   { id: 6, text: 'news', path: '/news' },
-  { id: 7, text: 'contact', path: '/contact' },
+  { id: 7, text: 'login', path: '/login' },
 ];

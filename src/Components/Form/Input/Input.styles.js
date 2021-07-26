@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
-export const formControlStyles = css`
+export const formControlStyles = ({ margin }) => css`
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: ${margin ? '1rem' : '0'};
 `;
 
 export const labelStyles = css`
@@ -28,10 +28,12 @@ export const errorIconStyles = css`
   position: absolute;
   top: 46px;
   right: 14px;
+  visibility: hidden;
 `;
 
 export const errorMessageStyles = css`
   padding: 0.3rem 1rem 0;
   color: red;
   font-size: 13px;
+  visibility: hidden;
 `;

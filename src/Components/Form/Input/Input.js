@@ -19,20 +19,22 @@ const Input = ({
   label,
   inputID,
   errorMessage,
+  margin,
 }) => {
   return (
-    <div css={formControlStyles}>
+    <div css={formControlStyles({ margin })}>
       <label css={labelStyles} htmlFor={inputID}>
         {label}
       </label>
       <input
         css={inputStyles}
         id={inputID}
-        type={type}
+        type={type || 'text'}
         value={value}
         onChange={onChangeHandler}
         placeholder={placeholder}
         autoFocus={autoFocus ? true : false}
+        autoComplete="off"
       />
       <MdError css={errorIconStyles} />
       <p css={errorMessageStyles}>{errorMessage}</p>

@@ -3,17 +3,17 @@
 import Form from '../../Components/Form';
 import ParticleBackground from '../../Components/ParticleBackground/ParticleBackground';
 
-import { sectionStyles } from './RegisterScreen.styles';
+import { sectionStyles } from './LoginScreen.styles';
 
-const RegisterScreen = () => {
+const LoginScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <Form password="password" btnTitle="Register" />
+        <Form password="password" btnTitle="Login" havAccount />
       </section>
       <ParticleBackground />
     </>
   );
 };
 
-export default RegisterScreen;
+export default LoginScreen;

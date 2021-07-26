@@ -2,13 +2,16 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import Navbar from './Components/Navbar/Navbar';
 
-import { CartScreen, HomeScreen, RegisterScreen } from './Screens';
+import { CartScreen, HomeScreen, RegisterScreen, LoginScreen } from './Screens';
 
 const App = () => {
   return (
     <Router>
       <Switch>
-        <Route exact path="/contact">
+        <Route exact path="/login">
+          <LoginScreen />
+        </Route>
+        <Route exact path="/register">
           <RegisterScreen />
         </Route>
         <>

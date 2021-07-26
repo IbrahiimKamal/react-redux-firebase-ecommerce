@@ -9,8 +9,15 @@ export const btnStyles = ({ width }) => css`
   outline: none;
   width: ${width && '85%'};
   cursor: pointer;
-  display: block;
   margin: 0 auto;
+  transition: transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 
   &:focus {
     outline: none;

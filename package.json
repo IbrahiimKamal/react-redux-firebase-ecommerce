@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.0.2",
+    "firebase": "^8.8.0",
     "rc-banner-anim": "^2.4.5",
     "rc-queue-anim": "^1.8.5",
     "rc-tween-one": "^2.7.3",

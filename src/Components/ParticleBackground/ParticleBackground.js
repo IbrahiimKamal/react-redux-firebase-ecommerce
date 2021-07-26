@@ -11,6 +11,7 @@ const ParticleBackground = () => {
         width: '100%',
         height: '100vh',
         background: '#000000',
+        overflow: 'hidden',
       }}
     >
       <Particles params={ParticlesConfig} />
