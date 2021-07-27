@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 
-import RegisterForm from '../../Components/Forms/RegisterForm/RegisterForm';
+import RegisterCompleteForm from '../../Components/Forms/RegisterCompleteForm/RegisterCompleteForm';
 import ParticleBackground from '../../Components/ParticleBackground/ParticleBackground';
 
-import { sectionStyles } from './RegisterScreen.styles';
+import { sectionStyles } from './RegisterCompleteScreen.styles';
 
-const RegisterScreen = () => {
+const RegisterCompleteScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <RegisterForm />
+        <RegisterCompleteForm />
       </section>
       <ParticleBackground
         position="absolute"
@@ -23,4 +23,4 @@ const RegisterScreen = () => {
   );
 };
 
-export default RegisterScreen;
+export default RegisterCompleteScreen;

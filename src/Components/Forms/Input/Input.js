@@ -13,13 +13,13 @@ import {
 const Input = ({
   type,
   value,
-  onChangeHandler,
+  onChange,
   placeholder,
-  autoFocus,
   label,
   inputID,
   errorMessage,
   margin,
+  disabled,
 }) => {
   return (
     <div css={formControlStyles({ margin })}>
@@ -29,12 +29,12 @@ const Input = ({
       <input
         css={inputStyles}
         id={inputID}
-        type={type || 'text'}
+        type={type}
         value={value}
-        onChange={onChangeHandler}
+        onChange={onChange}
         placeholder={placeholder}
-        autoFocus={autoFocus ? true : false}
         autoComplete="off"
+        disabled={disabled}
       />
       <MdError css={errorIconStyles} />
       <p css={errorMessageStyles}>{errorMessage}</p>

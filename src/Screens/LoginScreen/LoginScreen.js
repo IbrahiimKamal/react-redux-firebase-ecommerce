@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import Form from '../../Components/Form';
+import LoginForm from '../../Components/Forms/LoginForm/LoginForm';
 import ParticleBackground from '../../Components/ParticleBackground/ParticleBackground';
 
 import { sectionStyles } from './LoginScreen.styles';
@@ -9,7 +9,7 @@ const LoginScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <Form password="password" />
+        <LoginForm password />
       </section>
       <ParticleBackground
         position="absolute"
