@@ -1,7 +1,8 @@
 /** @jsxImportSource @emotion/react */
 
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Link, useHistory } from 'react-router-dom';
 import { AiOutlineLoading } from 'react-icons/ai';
 import { toast } from 'react-toastify';
 
@@ -23,10 +24,18 @@ import {
   titleStyles,
 } from '../styles';
 
-const RegisterForm = ({ history }) => {
+const RegisterForm = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
+  const { userAuth } = useSelector((state) => ({ ...state }));
+
+  useEffect(() => {
+    if (userAuth && userAuth.token) {
+      history.push('/');
+    }
+  }, [history, userAuth]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -63,6 +72,16 @@ const RegisterForm = ({ history }) => {
         <h3 css={titleStyles}>Register</h3>
         <p css={textStyles}>See your growth and get consulting support!</p>
       </div>
+      {/*
+      <Button width styles={googleBtnStyles}>
+        <span>
+          <FcGoogle size={15} /> <span>Sign In With Google</span>
+        </span>
+      </Button>
+
+      <header css={lineStyles}>
+        <div>Text between Lines</div>
+      </header> */}
 
       <Input
         inputID="name"
@@ -93,6 +112,8 @@ const RegisterForm = ({ history }) => {
           </span>
         </Button>
       )}
+
+      <br />
 
       <div css={registerLinkStyles}>
         <span>Already have an Account?</span>

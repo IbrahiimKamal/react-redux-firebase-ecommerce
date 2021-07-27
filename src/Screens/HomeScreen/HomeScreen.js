@@ -9,7 +9,7 @@ import Brand from '../../Components/Brand/Brand';
 import Box from '../../Components/Box/Box';
 import Meals from '../../Components/Meals/Meals';
 import Modal from '../../Components/Modal/Modal';
-import Progress from '../../Components/Progress/Progress';
+// import Progress from '../../Components/Progress/Progress';
 
 import { containerStyles } from './HomeScreen.styles';
 

@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 
-export const btnStyles = ({ width }) => css`
-  background-color: var(--blue-color);
+export const btnStyles = ({ width, bgColor }) => css`
+  background-color: ${bgColor || 'var(--blue-color)'};
   color: var(--white-color);
   border: 0;
   border-radius: 5rem;

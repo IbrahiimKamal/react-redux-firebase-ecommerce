@@ -1,7 +1,11 @@
 /** @jsxImportSource @emotion/react */
 
-import { AiOutlineMail } from 'react-icons/ai';
-import { FiPhone } from 'react-icons/fi';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+import { AiOutlineUser } from 'react-icons/ai';
+import { IoLogOutOutline } from 'react-icons/io5';
+import firebase from 'firebase';
 
 import SocialIcons from '../../SocialIcons/SocialIcons';
 
@@ -18,22 +22,75 @@ import {
 } from './NavbarLogo.styles';
 
 const NavbarLogo = () => {
+  const [loading, setLoading] = useState(true);
+  const { userAuth } = useSelector((state) => ({ ...state }));
+  const dispatch = useDispatch();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (userAuth) {
+      setLoading(false);
+    }
+
+    if (!userAuth) {
+      setLoading(true);
+    }
+  }, [userAuth, loading]);
+
+  const logoutHandler = () => {
+    firebase.auth().signOut();
+    dispatch({
+      type: 'LOGOUT',
+      payload: null,
+    });
+
+    history.push('/login');
+  };
+
   return (
     <>
       <div css={headerStyles}>
         <div className="container">
           {/* Navbar */}
           <nav css={navStyles}>
-            {/* Contact */}
-            <div css={contactStyles}>
-              <span className="contact">
-                <AiOutlineMail size={20} />{' '}
-                <span>ibrahiim.kamal@gmail.com</span>
-              </span>
-              <span className="contact">
-                <FiPhone size={20} /> <span>+2 011 5376 3481</span>
-              </span>
-            </div>
+            {/* auth icons */}
+            {loading && (
+              <div css={contactStyles}>
+                <span
+                  className="contact"
+                  onClick={() => history.push('/login')}
+                >
+                  <AiOutlineUser size={25} />
+                  <span>Login</span>
+                </span>
+              </div>
+            )}
+
+            {userAuth && (
+              <div
+                css={contactStyles}
+                style={{
+                  marginRight: '2rem',
+                }}
+              >
+                <span className="contact">
+                  <span>Hello, {userAuth.userDisplayName}</span>
+                </span>
+              </div>
+            )}
+
+            {userAuth && (
+              <div onClick={logoutHandler} css={contactStyles}>
+                <span
+                  className="contact"
+                  onClick={() => history.push('/login')}
+                >
+                  <IoLogOutOutline size={25} />
+                  <span>Logout</span>
+                </span>
+              </div>
+            )}
+
             {/* Logo */}
             <div css={navLogo}>
               <img src={logoImage} alt="logo" />

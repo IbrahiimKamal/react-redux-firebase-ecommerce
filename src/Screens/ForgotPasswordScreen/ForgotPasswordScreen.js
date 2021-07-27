@@ -1,15 +1,15 @@
 /** @jsxImportSource @emotion/react */
 
-import LoginForm from '../../Components/Forms/LoginForm/LoginForm';
+import ForgotPasswordForm from '../../Components/Forms/ForgotPasswordForm/ForgotPasswordForm';
 import ParticleBackground from '../../Components/ParticleBackground/ParticleBackground';
 
-import { sectionStyles } from './LoginScreen.styles';
+import { sectionStyles } from './ForgotPasswordScreen.styles';
 
-const LoginScreen = () => {
+const ForgotPasswordScreen = () => {
   return (
     <>
       <section css={sectionStyles}>
-        <LoginForm />
+        <ForgotPasswordForm />
       </section>
       <ParticleBackground
         position="absolute"
@@ -23,4 +23,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default ForgotPasswordScreen;

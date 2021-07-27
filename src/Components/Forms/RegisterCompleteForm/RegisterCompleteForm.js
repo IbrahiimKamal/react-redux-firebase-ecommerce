@@ -34,15 +34,18 @@ const RegisterCompleteForm = () => {
   }, []);
 
   const handleSubmit = async (e) => {
+    setIsLoading(true);
     e.preventDefault();
 
     if (!userEmail || !userPassword) {
       toast.error('email and password i required');
+      setIsLoading(false);
       return;
     }
 
     if (userPassword.length < 6) {
       toast.error('password must be 6 words');
+      setIsLoading(false);
       return;
     }
 
@@ -62,17 +65,17 @@ const RegisterCompleteForm = () => {
         await user.updateProfile({
           displayName: userName,
         });
-        const idTokenResult = await user.getIdTokenResult();
+        setIsLoading(false);
+        // const idTokenResult = await user.getIdTokenResult();
 
         // redux store
-        console.log(user);
 
         // redirect
         history.push('/');
       }
     } catch (error) {
       toast.error(error.message);
-      console.log(error);
+      setIsLoading(false);
     }
   };
 

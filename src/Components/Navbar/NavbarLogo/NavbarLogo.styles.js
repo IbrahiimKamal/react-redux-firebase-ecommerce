@@ -22,15 +22,11 @@ export const contactStyles = css`
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 0.875rem;
     color: var(--grey-color);
-
-    &:nth-of-type(1) {
-      margin-right: 0.8rem;
-    }
+    cursor: pointer;
 
     span {
-      margin-left: 0.5rem;
+      margin-left: 0.2rem;
     }
   }
 

@@ -3,6 +3,7 @@ import CartScreen from './CartScreen/CartScreen';
 import RegisterScreen from './RegisterScreen/RegisterScreen';
 import LoginScreen from './LoginScreen/LoginScreen';
 import RegisterCompleteScreen from './RegisterCompleteScreen/RegisterCompleteScreen';
+import ForgotPasswordScreen from './ForgotPasswordScreen/ForgotPasswordScreen';
 
 export {
   HomeScreen,
@@ -10,4 +11,5 @@ export {
   LoginScreen,
   RegisterScreen,
   RegisterCompleteScreen,
+  ForgotPasswordScreen,
 };

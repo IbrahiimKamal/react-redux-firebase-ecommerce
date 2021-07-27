@@ -61,13 +61,14 @@ export const lineStyles = css`
   align-items: center;
   padding: 0 2.6rem;
   color: #e1dfec;
+  margin-bottom: 1rem;
 
   &::before,
   &::after {
     content: '';
     display: block;
     height: 1px;
-    background-color: currentColor;
+    background-color: #e1dfec;
   }
 `;
 
@@ -87,13 +88,13 @@ export const loadingStyle = css`
 export const registerLinkStyles = css`
   font-size: 14px;
   span {
-    margin-right: 0.3rem;
+    /* margin-right: 0.3rem; */
   }
 `;
 
 export const forgotPassowrdStyles = css`
   display: inline-block;
-  padding: 1rem 0 0 0;
+  padding: 0 0 0 1rem;
   color: blue;
   color: var(--blue-color);
 `;
