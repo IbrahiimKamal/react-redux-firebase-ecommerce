@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 import 'bootstrap/dist/css/bootstrap-grid.min.css';
 
 import GlobalStyles from './styles/Global.styles';

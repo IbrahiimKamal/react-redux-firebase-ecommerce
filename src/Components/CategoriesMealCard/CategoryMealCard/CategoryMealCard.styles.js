@@ -20,6 +20,12 @@ export const imgContainerStyles = css`
   display: block;
   position: relative;
 
+  /* this class name come from lazy loading component */
+  .lazy-load-image-background {
+    width: 100%;
+    display: block !important;
+  }
+
   &::before {
     position: absolute;
     content: '';

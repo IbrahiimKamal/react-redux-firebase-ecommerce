@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { formatPrice } from '../../../utils/formatPrice';
 import { addCart } from '../../../Redux/cart/cart_actions';
@@ -39,7 +40,14 @@ const CategoryMealCard = ({ meal }) => {
   return (
     <div css={cardStyles}>
       <div css={imgContainerStyles}>
-        <img src={mealImg} css={imgStyles} alt={mealName} />
+        {/* <img src={mealImg} css={imgStyles} alt={mealName} /> */}
+        <LazyLoadImage
+          src={mealImg}
+          css={imgStyles}
+          alt={mealName}
+          effect="blur"
+          className="lazy-load-image-background lazy-load-image-loaded"
+        />
       </div>
       <div css={footerStyles}>
         <p css={titleStyles}>{mealName.split(' ').slice(0, 4).join(' ')}</p>

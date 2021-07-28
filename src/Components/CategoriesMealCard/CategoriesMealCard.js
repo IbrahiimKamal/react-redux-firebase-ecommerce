@@ -6,10 +6,12 @@ import { fetchCategoriesMeals } from '../../Redux/categoriesMeals/categoriesMeal
 import AppCol from '../Responsive/AppCol/AppCol';
 
 import CategoryMealCard from './CategoryMealCard/CategoryMealCard';
+import SkeletonMeals from '../Skeletons/SkeletonMeals';
 
 const CategoriesMealCard = () => {
   const {
     categoriesMeals: { meals },
+    loading,
   } = useSelector((state) => state.categoriesMeals);
 
   const dispatch = useDispatch();
@@ -21,15 +23,24 @@ const CategoriesMealCard = () => {
 
   return (
     <>
-      {meals &&
-        meals.map((meal) => (
-          <AppCol
-            key={meal.idMeal}
-            cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-5"
-          >
-            <CategoryMealCard meal={meal} />
-          </AppCol>
-        ))}
+      {!loading
+        ? meals &&
+          meals.map((meal) => (
+            <AppCol
+              key={meal.idMeal}
+              cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-5"
+            >
+              <CategoryMealCard meal={meal} />
+            </AppCol>
+          ))
+        : [...Array(20)].map((_, index) => (
+            <AppCol
+              key={index}
+              cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-5"
+            >
+              <SkeletonMeals />
+            </AppCol>
+          ))}
     </>
   );
 };
