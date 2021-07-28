@@ -15,6 +15,7 @@ import {
   LoginScreen,
   RegisterCompleteScreen,
   ForgotPasswordScreen,
+  MealsScreen,
 } from './Screens';
 
 const App = () => {
@@ -59,6 +60,7 @@ const App = () => {
           <ForgotPasswordScreen />
           <ToastContainer />
         </Route>
+        {/* this empty tag to remove Navbar component from  Forms Screens */}
         <>
           <Navbar />
           <Route exact path="/">
@@ -66,6 +68,9 @@ const App = () => {
           </Route>
           <Route exact path="/cart">
             <CartScreen />
+          </Route>
+          <Route exact path="/meals/:mealsCategory">
+            <MealsScreen />
           </Route>
         </>
       </Switch>

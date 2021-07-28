@@ -8,10 +8,14 @@ export const formStyles = css`
   z-index: 33;
   overflow-y: scroll;
   overflow-x: hidden;
-  &::-webkit-scrollbar {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  /* &::-webkit-scrollbar {
     height: 8px;
     display: none;
-  }
+  } */
 
   @media (max-width: 500px) {
     width: 85%;

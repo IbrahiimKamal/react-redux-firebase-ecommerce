@@ -39,9 +39,13 @@ export const cardFooterStyles = css`
 export const cardInfoStyles = css`
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   overflow-x: scroll;
   padding: 0 1rem;
+
+  width: 300px;
+  overflow-y: scroll;
+  scrollbar-color: #ece2d4 #fff;
+  scrollbar-width: thin;
 
   &::-webkit-scrollbar {
     height: 8px;

@@ -5,17 +5,24 @@ import { FaBox } from 'react-icons/fa';
 
 import './AddToCartButton.css';
 
-const AddToCartButton = ({ isActive, onClickHandler }) => {
+const AddToCartButton = ({
+  isActive,
+  onClickHandler,
+  className,
+  cartIconStyles,
+}) => {
   return (
     <button
-      className={`${isActive ? 'cart-button clicked' : 'cart-button'}`}
+      className={`${
+        isActive ? 'cart-button clicked' : 'cart-button'
+      } ${className}`}
       onClick={onClickHandler}
     >
-      <span className={`${isActive ? 'add-to-cart' : ''}`}>
+      <span className={`${isActive ? 'add-to-cart' : ''} ${cartIconStyles}`}>
         <IoCartSharp size={25} style={{ marginRight: '.5rem' }} /> Add to cart
       </span>
-      <IoCartSharp className="fa-shopping-cart" />
-      <FaBox className="fa-box" />
+      <IoCartSharp className="shopping-cart-icon" />
+      <FaBox className="box" />
     </button>
   );
 };

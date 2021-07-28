@@ -54,7 +54,7 @@ const NavbarLogo = () => {
           {/* Navbar */}
           <nav css={navStyles}>
             {/* auth icons */}
-            {loading && (
+            {loading && !userAuth && (
               <div css={contactStyles}>
                 <span
                   className="contact"
@@ -66,7 +66,7 @@ const NavbarLogo = () => {
               </div>
             )}
 
-            {userAuth && (
+            {userAuth && !loading && (
               <div
                 css={contactStyles}
                 style={{
@@ -79,7 +79,7 @@ const NavbarLogo = () => {
               </div>
             )}
 
-            {userAuth && (
+            {userAuth && !loading && (
               <div onClick={logoutHandler} css={contactStyles}>
                 <span
                   className="contact"
@@ -92,7 +92,7 @@ const NavbarLogo = () => {
             )}
 
             {/* Logo */}
-            <div css={navLogo}>
+            <div css={navLogo} onClick={logoutHandler}>
               <img src={logoImage} alt="logo" />
             </div>
             {/* Social Icons */}

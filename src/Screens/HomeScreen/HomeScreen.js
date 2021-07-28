@@ -12,15 +12,30 @@ import Modal from '../../Components/Modal/Modal';
 // import Progress from '../../Components/Progress/Progress';
 
 import { containerStyles } from './HomeScreen.styles';
+import Categories from '../../Components/CategoryCart/Categories';
 
 const HomeScreen = () => {
   return (
     <>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• Banner Section •• ]]]]]]]] */}
       <BannerSlider />
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Banner Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• End Banner Section •• ]]]]]]]] */}
 
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• Categories Card Section •• ]]]]]]]] */}
+      {/* Title Component */}
+      <SectionContainer padding="py-5">
+        <AppCol cols="col-10 mx-auto">
+          <Title title="products categories" subtitle="shop now" />
+        </AppCol>
+      </SectionContainer>
+
+      {/* Category Card Component */}
+      <SectionContainer padding="pb-3">
+        <Categories />
+      </SectionContainer>
+      {/* [[[[[[[[ •• End Categories Card Section •• ]]]]]]]] */}
+
+      {/* [[[[[[[[ •• Meals Section •• ]]]]]]]] */}
       {/* Title Component */}
       <SectionContainer padding="pt-5">
         <AppCol cols="col-10 mx-auto">
@@ -31,9 +46,9 @@ const HomeScreen = () => {
       <SectionContainer padding="py-5">
         <Meals sliceStart={0} sliceEnd={8} />
       </SectionContainer>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• End Meals Section •• ]]]]]]]] */}
 
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• Service Card Section •• ]]]]]]]] */}
       {/* Title Component */}
       <SectionContainer className="section-bg" padding="pt-5">
         <AppCol cols="col-10 mx-auto">
@@ -45,9 +60,9 @@ const HomeScreen = () => {
       <SectionContainer className="section-bg" padding="py-5">
         <ServicesCard />
       </SectionContainer>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Service Card Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• End Service Card Section •• ]]]]]]]] */}
 
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• Brand Section •• ]]]]]]]] */}
       {/* Title */}
       <SectionContainer padding="pt-5" className="section-bg">
         <AppCol cols="col-10 mx-auto">
@@ -78,20 +93,7 @@ const HomeScreen = () => {
           <Modal />
         </AppCol>
       </SectionContainer>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Brand Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
-
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
-      {/* Title Component */}
-      <SectionContainer padding="pt-5">
-        <AppCol cols="col-10 mx-auto">
-          <Title title="BESTSELLER PRODUCTS" subtitle="our products" />
-        </AppCol>
-      </SectionContainer>
-
-      <SectionContainer padding="pt-4">
-        <Meals sliceStart={8} sliceEnd={16} />
-      </SectionContainer>
-      {/* [[[[[[[[[[[[[[[[[[[[[[[ •• End Meals Section •• ]]]]]]]]]]]]]]]]]]]]]]] */}
+      {/* [[[[[[[[ •• End Brand Section •• ]]]]]]]] */}
     </>
   );
 };
