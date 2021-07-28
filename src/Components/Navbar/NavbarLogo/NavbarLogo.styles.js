@@ -12,11 +12,11 @@ export const navStyles = css`
 `;
 
 export const contactStyles = css`
-  display: none;
+  /* display: none; */
 
-  @media (min-width: 992px) {
+  /* @media (min-width: 992px) {
     display: flex;
-  }
+  } */
 
   .contact {
     display: flex;

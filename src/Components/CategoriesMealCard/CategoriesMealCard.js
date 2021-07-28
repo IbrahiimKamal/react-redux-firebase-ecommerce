@@ -28,7 +28,7 @@ const CategoriesMealCard = () => {
           meals.map((meal) => (
             <AppCol
               key={meal.idMeal}
-              cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-5"
+              cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto"
             >
               <CategoryMealCard meal={meal} />
             </AppCol>

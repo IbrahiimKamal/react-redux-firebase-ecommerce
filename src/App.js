@@ -16,6 +16,7 @@ import {
   RegisterCompleteScreen,
   ForgotPasswordScreen,
   MealsScreen,
+  FilterMealsScreen,
 } from './Screens';
 
 const App = () => {
@@ -66,9 +67,15 @@ const App = () => {
           <Route exact path="/">
             <HomeScreen />
           </Route>
+
+          <Route path="/our-products">
+            <FilterMealsScreen />
+          </Route>
+
           <Route exact path="/cart">
             <CartScreen />
           </Route>
+
           <Route exact path="/meals/:mealsCategory">
             <MealsScreen />
           </Route>

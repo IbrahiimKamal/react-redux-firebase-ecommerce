@@ -38,7 +38,7 @@ const CategoryMealCard = ({ meal }) => {
   const { idMeal: mealPrice, strMealThumb: mealImg, strMeal: mealName } = meal;
 
   return (
-    <div css={cardStyles}>
+    <div css={cardStyles} className="mb-3">
       <div css={imgContainerStyles}>
         {/* <img src={mealImg} css={imgStyles} alt={mealName} /> */}
         <LazyLoadImage
