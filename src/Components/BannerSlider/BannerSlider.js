@@ -13,7 +13,7 @@ import './BannerSlider.css';
 const { Element, Arrow, Thumb } = BannerAnim;
 const BgElement = Element.BgElement;
 
-// ATTENTION PLEASE!!!!!!!
+// ATTENTION PLEASE, ##IBRAHIM KAMAL## here!!!!!!!
 // If you ask yourself why I used class component here!
 // because I use Ant Motion in this component to animate BannerSlider
 // and in the documentation they use class component

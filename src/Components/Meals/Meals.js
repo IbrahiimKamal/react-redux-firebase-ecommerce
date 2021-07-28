@@ -5,9 +5,10 @@ import MealCard from '../MealCard/MealCard';
 import AppCol from '../Responsive/AppCol/AppCol';
 
 import { fetchMeals } from '../../Redux/meals/meals_actions';
+import SkeletonMeals from '../Skeletons/SkeletonMeals';
 
 const Meals = ({ sliceStart, sliceEnd }) => {
-  const { meals } = useSelector((state) => state.allProducts.meals);
+  const { meals, loading } = useSelector((state) => state.allProducts.meals);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,7 +17,8 @@ const Meals = ({ sliceStart, sliceEnd }) => {
 
   return (
     <>
-      {meals &&
+      {!loading &&
+        meals &&
         meals.slice(sliceStart, sliceEnd).map((meal) => (
           <AppCol
             key={meal.idMeal}

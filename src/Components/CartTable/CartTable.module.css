@@ -19,8 +19,6 @@
 .thStyles {
   text-align: left;
   padding: 5px;
-  /* color: #fff; */
-  /* background: var(--green-color); */
   font-weight: normal;
   padding: 0.5rem 0;
   border-bottom: 1px solid var(--green-color);
@@ -38,9 +36,9 @@
 }
 
 .cartImg {
-  width: 80px;
-  height: 80px;
-  margin-right: 10px;
+  width: 80px !important;
+  height: 80px !important;
+  margin-right: 10px !important;
 }
 
 .totalPrice {

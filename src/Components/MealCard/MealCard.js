@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import AddToCartButton from '../Buttons/AddToCartButton/AddToCartButton';
 
@@ -53,7 +54,15 @@ const MealCard = ({ meal }) => {
       <div css={cardStyles}>
         {/* card image */}
         <Link to="/cart" css={imgContainerStyles}>
-          <img css={fruitImageStyles} src={mealImg} alt="fruit" />
+          {/* <img css={fruitImageStyles} src={mealImg} alt="fruit" /> */}
+
+          <LazyLoadImage
+            css={fruitImageStyles}
+            src={mealImg}
+            alt={mealName}
+            effect="blur"
+            className="lazy-load-image-background lazy-load-image-loaded"
+          />
         </Link>
         {/* card footer */}
         <div css={cardFooterStyles}>

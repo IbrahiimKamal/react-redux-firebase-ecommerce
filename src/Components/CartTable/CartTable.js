@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
 import { useDispatch, useSelector } from 'react-redux';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import { deleteCart } from '../../Redux/cart/cart_actions';
 
@@ -44,11 +45,19 @@ const CartTable = () => {
                 <tr key={item.id}>
                   <td className={styles.tdStyles}>
                     <div className={styles.cartInfo}>
-                      <img
+                      {/* <img
                         className={styles.cartImg}
                         src={item.image}
                         alt={item.name}
+                      /> */}
+
+                      <LazyLoadImage
+                        className={`${styles.cartImg} lazy-load-image-background lazy-load-image-loaded`}
+                        src={item.image}
+                        alt={item.name}
+                        effect="blur"
                       />
+
                       <div>
                         <p>{item.name}</p>
                         <small>Price: {formatPrice(item.price)}</small>

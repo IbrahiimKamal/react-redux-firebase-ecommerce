@@ -1,5 +1,7 @@
 /** @jsxImportSource @emotion/react */
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+
 import { servicesData } from '../../utils/servicesData';
 import AppCol from '../Responsive/AppCol/AppCol';
 import {
@@ -22,7 +24,14 @@ const ServicesCard = () => {
               <p css={textStyles}>{text}</p>
             </div>
             <div css={imgContainerStyles}>
-              <img css={imgStyles} src={serviceImg} alt={title} />
+              {/* <img css={imgStyles} src={serviceImg} alt={title} /> */}
+              <LazyLoadImage
+                css={imgStyles}
+                src={serviceImg}
+                alt={title}
+                effect="blur"
+                className="lazy-load-image-background lazy-load-image-loaded"
+              />
             </div>
           </div>
         </AppCol>

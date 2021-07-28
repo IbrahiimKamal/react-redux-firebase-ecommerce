@@ -63,6 +63,12 @@ const GlobalStyles = () => {
           border-radius: 0.3rem;
           padding: 2rem 0 0;
         }
+
+        /* this class name come from lazy loading component */
+        .lazy-load-image-background {
+          width: 100%;
+          display: block !important;
+        }
       `}
     />
   );

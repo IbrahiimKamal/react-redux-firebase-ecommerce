@@ -4,8 +4,16 @@ import QueueAnim from 'rc-queue-anim';
 import PropTypes from 'prop-types';
 import TweenOne, { TweenOneGroup } from 'rc-tween-one';
 import { AiOutlineClose } from 'react-icons/ai';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import './styles.css';
+
+// ATTENTION PLEASE, ##IBRAHIM KAMAL## here!!!!!!!!!!!!!!!
+// If you ask yourself why I used class component here!
+// because I use Ant Motion in this component to animate Image Gallery
+// and in the documentation they use class component
+// so it will take a lot of time to convert class component to function component
+// !!!!!!!!!! Ibrahim Kamal !!!!!!!!!!
 
 class Modal extends Component {
   static propTypes = {
@@ -130,7 +138,15 @@ class Modal extends Component {
               }}
               animation={aAnimation}
             >
-              <img src={image} width="100%" height="100%" alt="" />
+              {/* <img src={image} width="100%" height="100%" alt="" /> */}
+              <LazyLoadImage
+                src={image}
+                width="100%"
+                height="100%"
+                alt=""
+                effect="blur"
+                className="lazy-load-image-background lazy-load-image-loaded"
+              />
             </TweenOne>
             <TweenOneGroup
               enter={[
