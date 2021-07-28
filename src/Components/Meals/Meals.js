@@ -22,7 +22,7 @@ const Meals = ({ sliceStart, sliceEnd }) => {
         meals.slice(sliceStart, sliceEnd).map((meal) => (
           <AppCol
             key={meal.idMeal}
-            cols="col-11 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3"
+            cols="col-10 col-md-6 col-lg-4 col-xl-3 mx-auto mb-3"
           >
             <MealCard meal={meal} />
           </AppCol>

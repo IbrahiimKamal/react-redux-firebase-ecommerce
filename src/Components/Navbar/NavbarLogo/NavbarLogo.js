@@ -92,7 +92,7 @@ const NavbarLogo = () => {
             )}
 
             {/* Logo */}
-            <div css={navLogo} onClick={logoutHandler}>
+            <div css={navLogo} onClick={() => history.push('/')}>
               <img src={logoImage} alt="logo" />
             </div>
             {/* Social Icons */}

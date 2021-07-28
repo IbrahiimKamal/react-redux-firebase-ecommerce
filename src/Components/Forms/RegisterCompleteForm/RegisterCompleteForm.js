@@ -82,7 +82,12 @@ const RegisterCompleteForm = () => {
   return (
     <form onSubmit={handleSubmit} css={formStyles}>
       <div css={headerStyles}>
-        <img css={logoStyles} src={logoImg} alt="logo" />
+        <img
+          css={logoStyles}
+          src={logoImg}
+          alt="logo"
+          onClick={() => history.push('/')}
+        />
         <h3 css={titleStyles}>Complete Registration</h3>
         <p css={textStyles}>See your growth and get consulting support!</p>
       </div>

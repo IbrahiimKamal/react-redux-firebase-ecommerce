@@ -16,7 +16,7 @@ export const iconsListStyles = ({ bgColor }) => css`
     }
 
     &:hover:nth-of-type(2) span {
-      background-color: #1da1f2;
+      background-color: #ff0000;
     }
 
     &:hover:nth-of-type(3) span {
@@ -24,7 +24,7 @@ export const iconsListStyles = ({ bgColor }) => css`
     }
 
     &:hover:nth-of-type(4) span {
-      background-color: #ff0000;
+      background-color: #191e25;
     }
 
     a {

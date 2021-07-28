@@ -38,6 +38,7 @@ export const contactStyles = css`
 
 export const navLogo = css`
   margin: 0 auto;
+  cursor: pointer;
 
   img {
     display: block;

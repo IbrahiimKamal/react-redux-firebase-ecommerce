@@ -9,7 +9,7 @@ const SocialIcons = ({ styles }) => {
     <ul css={[iconsListStyles, styles]}>
       {socialIcons.map((socialIcon) => (
         <li key={socialIcon.id}>
-          <a href="https://www.google.com/">
+          <a href={socialIcon.path} target="_blank" rel="noreferrer">
             <span>{socialIcon.icon}</span>
           </a>
         </li>
