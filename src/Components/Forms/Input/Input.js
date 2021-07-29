@@ -20,6 +20,7 @@ const Input = ({
   errorMessage,
   margin,
   disabled,
+  name,
 }) => {
   return (
     <div css={formControlStyles({ margin })}>
@@ -35,6 +36,7 @@ const Input = ({
         placeholder={placeholder}
         autoComplete="off"
         disabled={disabled}
+        name={name}
       />
       <MdError css={errorIconStyles} />
       <p css={errorMessageStyles}>{errorMessage}</p>

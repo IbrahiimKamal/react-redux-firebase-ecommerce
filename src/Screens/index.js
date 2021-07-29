@@ -7,6 +7,7 @@ import ForgotPasswordScreen from './ForgotPasswordScreen/ForgotPasswordScreen';
 import MealsScreen from './MealsScreen/MealsScreen';
 import FilterMealsScreen from './FilterMealsScreen/FilterMealsScreen';
 import ServicesScreen from './ServicesScreen/ServicesScreen';
+import ContactScreen from './ContactScreen/ContactScreen';
 
 export {
   HomeScreen,
@@ -18,4 +19,5 @@ export {
   MealsScreen,
   FilterMealsScreen,
   ServicesScreen,
+  ContactScreen,
 };

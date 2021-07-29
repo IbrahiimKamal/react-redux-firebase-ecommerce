@@ -19,6 +19,7 @@ import {
   MealsScreen,
   FilterMealsScreen,
   ServicesScreen,
+  ContactScreen,
 } from './Screens';
 
 const App = () => {
@@ -51,16 +52,24 @@ const App = () => {
           <LoginScreen />
           <ToastContainer />
         </Route>
+
         <Route exact path="/register">
           <RegisterScreen />
           <ToastContainer />
         </Route>
+
         <Route exact path="/register/complete">
           <RegisterCompleteScreen />
           <ToastContainer />
         </Route>
+
         <Route exact path="/forgot/password">
           <ForgotPasswordScreen />
+          <ToastContainer />
+        </Route>
+
+        <Route exact path="/contact">
+          <ContactScreen />
           <ToastContainer />
         </Route>
         {/* this empty tag to remove Navbar component from  Forms Screens */}
