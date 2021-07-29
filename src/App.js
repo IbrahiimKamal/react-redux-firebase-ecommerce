@@ -9,6 +9,9 @@ import { auth } from './Firebase';
 import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
 
+// scroll to top component
+import ScrollToTop from './utils/ScrollToTop';
+
 import {
   CartScreen,
   HomeScreen,
@@ -47,6 +50,7 @@ const App = () => {
 
   return (
     <Router>
+      <ScrollToTop />
       <Switch>
         <Route exact path="/login">
           <LoginScreen />

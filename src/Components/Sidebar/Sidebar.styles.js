@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 export const sidebarStyles = ({ isSidebarActive }) => css`
   position: fixed;
-  top: 150px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
