@@ -3,12 +3,14 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
+import emptyCartImg from '../../Assets/images/emptycart.jpg';
 import { deleteCart } from '../../Redux/cart/cart_actions';
-
 import { formatPrice } from '../../utils/formatPrice';
+
 import IncreaseDecreaseButton from '../Buttons/IncreaseDecreaseButton/IncreaseDecreaseButton';
 
 import styles from './CartTable.module.css';
+import Title from '../Title/Title';
 
 const CartTable = () => {
   const { Carts } = useSelector((state) => state.cart);
@@ -31,6 +33,13 @@ const CartTable = () => {
     <section className="py-5">
       {ListCart.length !== 0 && (
         <div className="container">
+          <div className="row pb-5">
+            <Title title="your cart items" />
+          </div>
+        </div>
+      )}
+      {ListCart.length !== 0 && (
+        <div className="container">
           <table className={styles.tableStyles}>
             <thead>
               <tr>
@@ -45,12 +54,6 @@ const CartTable = () => {
                 <tr key={item.id}>
                   <td className={styles.tdStyles}>
                     <div className={styles.cartInfo}>
-                      {/* <img
-                        className={styles.cartImg}
-                        src={item.image}
-                        alt={item.name}
-                      /> */}
-
                       <LazyLoadImage
                         className={`${styles.cartImg} lazy-load-image-background lazy-load-image-loaded`}
                         src={item.image}
@@ -94,7 +97,22 @@ const CartTable = () => {
         </div>
       )}
 
-      {ListCart.length === 0 && <h1>No Items Found</h1>}
+      {/* empty cart Image */}
+      {ListCart.length === 0 && (
+        <section>
+          <div className="container">
+            <div className="row">
+              <div className="col-10 col-md-6 mx-auto">
+                <img
+                  src={emptyCartImg}
+                  className={styles.emptyCartStyles}
+                  alt="empty cart"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
     </section>
   );
 };
