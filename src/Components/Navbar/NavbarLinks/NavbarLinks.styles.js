@@ -3,6 +3,7 @@ import { css } from '@emotion/react';
 export const headerStyles = css`
   background-color: var(--primary-color);
   padding: 0.7rem 0;
+  position: relative;
 `;
 
 export const navStyles = css`

@@ -1,9 +1,12 @@
 /** @jsxImportSource @emotion/react */
+
+import { useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
 import { BsSearch, BsBag } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 
 import ToggleIcon from '../../ToggleIcon/ToggleIcon';
+import Sidebar from '../../Sidebar/Sidebar';
 
 import { navLinks } from '../../../utils/navbarLinks';
 import {
@@ -14,6 +17,7 @@ import {
 } from './NavbarLinks.styles';
 
 const NavbarLinks = () => {
+  const [isSidebarActive, setIsSidebarActive] = useState(false);
   const cart = useSelector((state) => state.cart);
   const history = useHistory();
 
@@ -22,8 +26,14 @@ const NavbarLinks = () => {
       <div className="container">
         <nav css={navStyles}>
           {/* toggle icon */}
-          <span css={toggleIconStyles}>
-            <ToggleIcon />
+          <span
+            css={toggleIconStyles}
+            onClick={() => setIsSidebarActive(!isSidebarActive)}
+          >
+            <ToggleIcon
+              isSidebarActive={isSidebarActive}
+              setIsSidebarActive={setIsSidebarActive}
+            />
           </span>
           {/* search Icon */}
           <span>
@@ -46,6 +56,10 @@ const NavbarLinks = () => {
           </span>
         </nav>
       </div>
+      <Sidebar
+        isSidebarActive={isSidebarActive}
+        setIsSidebarActive={setIsSidebarActive}
+      />
     </header>
   );
 };
