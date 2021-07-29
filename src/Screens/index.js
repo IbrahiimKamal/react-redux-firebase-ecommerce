@@ -6,6 +6,7 @@ import RegisterCompleteScreen from './RegisterCompleteScreen/RegisterCompleteScr
 import ForgotPasswordScreen from './ForgotPasswordScreen/ForgotPasswordScreen';
 import MealsScreen from './MealsScreen/MealsScreen';
 import FilterMealsScreen from './FilterMealsScreen/FilterMealsScreen';
+import ServicesScreen from './ServicesScreen/ServicesScreen';
 
 export {
   HomeScreen,
@@ -16,4 +17,5 @@ export {
   ForgotPasswordScreen,
   MealsScreen,
   FilterMealsScreen,
+  ServicesScreen,
 };

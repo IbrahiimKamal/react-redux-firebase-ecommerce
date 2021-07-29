@@ -6,7 +6,7 @@ import { brandsImages } from '../../utils/brandsImages';
 
 import './Brand.css';
 
-const Brand = () => {
+const Brand = ({ borderNone }) => {
   const settings = {
     infinite: true,
     slidesToShow: 4,
@@ -39,7 +39,7 @@ const Brand = () => {
   };
 
   return (
-    <section className="py-5 brand section-bg">
+    <section className={`${'py-5 section-bg'} ${borderNone ? '' : 'brand'}`}>
       <div className="container">
         {/* Slider */}
         <div className="slider-container ">

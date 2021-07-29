@@ -18,6 +18,7 @@ import {
   ForgotPasswordScreen,
   MealsScreen,
   FilterMealsScreen,
+  ServicesScreen,
 } from './Screens';
 
 const App = () => {
@@ -80,6 +81,11 @@ const App = () => {
           <Route exact path="/meals/:mealsCategory">
             <MealsScreen />
           </Route>
+
+          <Route exact path="/services">
+            <ServicesScreen />
+          </Route>
+
           <Footer />
         </>
       </Switch>
