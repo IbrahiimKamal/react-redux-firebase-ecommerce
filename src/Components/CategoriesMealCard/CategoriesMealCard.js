@@ -7,6 +7,7 @@ import AppCol from '../Responsive/AppCol/AppCol';
 
 import CategoryMealCard from './CategoryMealCard/CategoryMealCard';
 import SkeletonMeals from '../Skeletons/SkeletonMeals';
+import Title from '../Title/Title';
 
 const CategoriesMealCard = () => {
   const {
@@ -23,6 +24,16 @@ const CategoriesMealCard = () => {
 
   return (
     <>
+      <section className="pb-5">
+        <div className="container">
+          <div className="row">
+            <div className="col-10 mx-auto">
+              <Title title={`${mealsCategory} meals`} />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {!loading
         ? meals &&
           meals.map((meal) => (

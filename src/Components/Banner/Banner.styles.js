@@ -6,19 +6,20 @@ export const bannerStyles = ({ bannerImg, bannerHeight }) => css`
   min-width: 100%;
   background-image: url(${bannerImg});
   background-position: center center;
+  /* background-attachment: fixed; */
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   position: relative;
 
-  &::after {
+  /* &::after {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-  }
+    background: rgba(0, 0, 0, 0.3);
+  } */
 
   @media (min-width: 992px) {
     display: block;

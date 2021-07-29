@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { auth } from './Firebase';
 
 import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Footer/Footer';
 
 import {
   CartScreen,
@@ -79,6 +80,7 @@ const App = () => {
           <Route exact path="/meals/:mealsCategory">
             <MealsScreen />
           </Route>
+          <Footer />
         </>
       </Switch>
     </Router>
