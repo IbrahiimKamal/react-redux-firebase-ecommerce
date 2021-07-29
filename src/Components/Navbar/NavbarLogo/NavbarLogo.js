@@ -66,7 +66,7 @@ const NavbarLogo = () => {
               </div>
             )}
 
-            {userAuth && !loading && (
+            {userAuth && (
               <div
                 css={contactStyles}
                 style={{

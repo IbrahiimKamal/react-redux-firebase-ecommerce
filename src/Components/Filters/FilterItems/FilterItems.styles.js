@@ -6,6 +6,7 @@ export const listStyle = css`
   border-radius: 0.5rem;
   position: sticky;
   top: 10%;
+  margin-bottom: 1rem;
 `;
 
 export const titleStyle = css`

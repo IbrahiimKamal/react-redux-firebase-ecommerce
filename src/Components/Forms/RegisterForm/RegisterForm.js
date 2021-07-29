@@ -41,6 +41,12 @@ const RegisterForm = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    if (!userName || !userEmail) {
+      toast.error('Name & Email & Message are required');
+      setIsLoading(false);
+      return;
+    }
+
     const config = {
       url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
       handleCodeInApp: true,

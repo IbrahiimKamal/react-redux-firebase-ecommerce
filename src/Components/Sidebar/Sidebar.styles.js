@@ -15,6 +15,10 @@ export const sidebarStyles = ({ isSidebarActive }) => css`
   transition: transform 0.3s;
 
   transform: ${isSidebarActive ? 'translateX(0)' : 'translateX(-110%)'};
+
+  @media (min-width: 992px) {
+    display: none;
+  }
 `;
 
 export const logoStyles = css`
