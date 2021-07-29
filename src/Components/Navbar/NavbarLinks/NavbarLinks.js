@@ -40,8 +40,8 @@ const NavbarLinks = () => {
             ))}
           </ul>
           {/* cart icon */}
-          <span className="cart">
-            <BsBag onClick={() => history.push('/cart')} size={30} />
+          <span className="cart" onClick={() => history.push('/cart')}>
+            <BsBag size={30} />
             <span className="cart-count">{cart.numberCart}</span>
           </span>
         </nav>

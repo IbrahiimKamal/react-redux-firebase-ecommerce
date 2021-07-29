@@ -17,7 +17,7 @@
 
 .banner-user-elem .banner-user-title,
 .banner-user-elem .banner-user-text {
-  top: 20%;
+  top: 15%;
   left: 10%;
   z-index: 10;
 }
@@ -71,7 +71,7 @@
 }
 
 .custom-arrow-thumb {
-  height: 80vh;
+  height: 50vh;
 }
 
 .custom-arrow-thumb .user-arrow {
@@ -197,6 +197,10 @@
     display: block;
     max-width: 30%;
   }
+
+  .custom-arrow-thumb {
+    height: 70vh;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -208,6 +212,10 @@
 @media screen and (min-width: 1024px) {
   .banner-line-image {
     max-width: 15%;
+  }
+
+  .custom-arrow-thumb {
+    height: 85vh;
   }
 }
 

@@ -8,9 +8,10 @@ import { deleteCart } from '../../Redux/cart/cart_actions';
 import { formatPrice } from '../../utils/formatPrice';
 
 import IncreaseDecreaseButton from '../Buttons/IncreaseDecreaseButton/IncreaseDecreaseButton';
+import BtnLink from '../Buttons/BtnLink/BtnLink';
+import Title from '../Title/Title';
 
 import styles from './CartTable.module.css';
-import Title from '../Title/Title';
 
 const CartTable = () => {
   const { Carts } = useSelector((state) => state.cart);
@@ -108,6 +109,11 @@ const CartTable = () => {
                   className={styles.emptyCartStyles}
                   alt="empty cart"
                 />
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-10 mx-auto" style={{ textAlign: 'center' }}>
+                <BtnLink title="shop now" />
               </div>
             </div>
           </div>

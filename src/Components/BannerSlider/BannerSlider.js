@@ -9,6 +9,7 @@ import sliderImage3 from '../../Assets/images/slide/slide_v1_3.jpg';
 import lineImage from '../../Assets/images/line1.png';
 
 import './BannerSlider.css';
+import BtnLink from '../Buttons/BtnLink/BtnLink';
 
 const { Element, Arrow, Thumb } = BannerAnim;
 const BgElement = Element.BgElement;
@@ -141,6 +142,8 @@ class BannerSlider extends Component {
                 animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
               >
                 Welcom to <br /> agriculture Form
+                <br />
+                <BtnLink title="shop now" />
               </TweenOne>
             </Element>
             <Element key="bbb" prefixCls="banner-user-elem">
@@ -169,6 +172,8 @@ class BannerSlider extends Component {
                 animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
               >
                 Welcom to <br /> agriculture Form
+                <br />
+                <BtnLink title="shop now" />
               </TweenOne>
             </Element>
             <Element key="ccc" prefixCls="banner-user-elem">
@@ -197,6 +202,8 @@ class BannerSlider extends Component {
                 animation={{ y: 30, opacity: 0, type: 'from', delay: 100 }}
               >
                 Welcom to <br /> agriculture Form
+                <br />
+                <BtnLink title="shop now" />
               </TweenOne>
             </Element>
             <Arrow

@@ -7,7 +7,7 @@ import bannerImg from '../../Assets/images/banners/banner1.jpg';
 const MealsScreen = () => {
   return (
     <>
-      <Banner bannerImg={bannerImg} bannerHeight="50vh" />
+      <Banner bannerImg={bannerImg} bannerHeight="40vh" />
 
       <SectionContainer padding="py-5">
         <CategoriesMealCard />

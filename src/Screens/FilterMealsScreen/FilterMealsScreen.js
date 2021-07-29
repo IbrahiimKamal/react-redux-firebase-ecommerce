@@ -4,7 +4,7 @@ import Banner from '../../Components/Banner/Banner';
 import FilterItems from '../../Components/Filters/FilterItems/FilterItems';
 import FilterMeals from '../../Components/Filters/FilterMeals/FilterMeals';
 
-import bannerImg from '../../Assets/images/banners/banner1.jpg';
+import bannerImg from '../../Assets/images/banners/banner6.jpg';
 
 const FilterMealsScreen = () => {
   const [selectMeal, setSelectMeal] = useState('Beef');
@@ -15,7 +15,7 @@ const FilterMealsScreen = () => {
 
   return (
     <>
-      <Banner bannerImg={bannerImg} bannerHeight="50vh" />
+      <Banner bannerImg={bannerImg} bannerHeight="35vh" overlay />
 
       <section className="py-5">
         <div className="container">

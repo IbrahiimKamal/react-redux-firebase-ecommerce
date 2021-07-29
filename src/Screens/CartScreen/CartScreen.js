@@ -1,12 +1,12 @@
 import Banner from '../../Components/Banner/Banner';
 import CartTable from '../../Components/CartTable/CartTable';
 
-import cartBanner from '../../Assets/images/banners/banner1.jpg';
+import bannerImg from '../../Assets/images/banners/banner6.jpg';
 
 const CartScreen = () => {
   return (
     <>
-      <Banner bannerImg={cartBanner} bannerHeight="50vh" />
+      <Banner bannerImg={bannerImg} bannerHeight="35vh" overlay />
       <CartTable />
     </>
   );
