@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 
 export const sidebarStyles = ({ isSidebarActive }) => css`
-  position: absolute;
-  top: 61.9px;
+  position: fixed;
+  top: 150px;
   left: 0;
   width: 100%;
   height: 100vh;
